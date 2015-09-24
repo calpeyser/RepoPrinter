@@ -1,4 +1,4 @@
-import os
+import os, sys
 
 def is_code(filename):
 	if filename[-5:] == ".java": return True
@@ -24,4 +24,4 @@ def aggregate(base_dir, dest):
 			destination_file.write(source)
 
 if __name__ == "__main__":
-	aggregate("/Users/calpeyser/Desktop/bazel/", "/Users/calpeyser/Desktop/code.txt")
+	aggregate(sys.argv[1], sys.argv[2])
